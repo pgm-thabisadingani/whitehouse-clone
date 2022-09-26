@@ -1,0 +1,35 @@
+.contact-page {
+  margin-top: -3rem;
+  .wpforms-container {
+    label.wpforms-field-label {
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      line-height: 125%;
+    }
+    .wpforms-form input[type="text"],
+    .wpforms-form textarea,
+    .wpforms-form input[type="number"],
+    .wpforms-form input[type="email"],
+    .wpforms-form .choices__inner,
+    select {
+      appearance: none;
+      background-color: $light-blue;
+      border: 1px solid $light-blue;
+      border-radius: 8px;
+      color: #0a2458;
+      padding: 16.5px 14px 16.5px 13px;
+      transition: 0.2s ease;
+    }
+    .wpforms-form .choices .choices__inner {
+      min-height: unset !important;
+      border-radius: 8px !important;
+      padding: 8px 14px 8px 13px !important;
+    }
+    .wpforms-form button[type="submit"] {
+      @include Btn($bckcolor: $blue, $ftcolor: $white);
+    }
+  }
+}

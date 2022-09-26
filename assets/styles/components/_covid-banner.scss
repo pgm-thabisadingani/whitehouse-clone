@@ -1,0 +1,67 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+.covid-container {
+  @include paddingLR;
+  padding: 2rem 0;
+
+  .covid-banner {
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    border-radius: 16px;
+    overflow: hidden;
+
+    background-position: center;
+
+    position: relative;
+    &_overlay {
+      display: flex;
+      background-color: $bckg-black;
+
+      padding: 4rem 3rem;
+      justify-content: center;
+      align-items: center;
+      @media (min-width: $breakpoint-x-large) {
+        padding: 7rem;
+      }
+    }
+    &_content {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3rem;
+
+      hr {
+        margin: 0.5rem 0 2rem;
+      }
+
+      a {
+        @include Btn($bckcolor: $dark-blue, $ftcolor: $white);
+      }
+    }
+    &_sub {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $peach;
+      font-weight: 600;
+      padding: 0.8rem;
+      border-radius: 0 16px 0 16px;
+      p {
+        margin: 0 !important;
+        text-transform: uppercase;
+      }
+      &_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-x-large) {
+    padding: 4rem 0;
+  }
+}

@@ -1,0 +1,118 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.container-footer {
+  @include paddingLR;
+  margin-top: 40px;
+  .navigation-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: none;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    justify-content: space-between;
+    ul li {
+      list-style-type: none;
+    }
+    li a {
+      text-decoration: none;
+    }
+
+    .footer-nav-wrapper {
+      width: 100%;
+      .menu-primary-menu-container {
+        @include horizontal-list;
+        .menu {
+          @include reset-list;
+          column-count: 1;
+          column-gap: 2rem;
+          li {
+            padding-bottom: 0.5rem;
+          }
+          @media (min-width: $breakpoint-large) {
+            column-count: 2;
+          }
+        }
+      }
+      .widgets-list {
+        @include horizontal-list;
+        a {
+          color: $blue !important;
+        }
+      }
+
+      @media (min-width: $breakpoint-large) {
+        width: 50%;
+      }
+      @media (min-width: $breakpoint-x-large) {
+        width: 38%;
+      }
+    }
+
+    .container-left-side {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-top: 2rem;
+      .menu-contact-menu-container {
+        ul li {
+          margin-bottom: 0.6rem;
+          font-size: 0.8rem;
+        }
+
+        li a {
+          color: $primary;
+        }
+      }
+      .menu-social-menu-container {
+        @include social($margin: 0rem);
+        margin-top: 1rem;
+        @media (min-width: $breakpoint-large) {
+          margin-top: unset;
+        }
+      }
+      .address {
+        h2,
+        p {
+          color: $primary;
+          font-size: 0.8rem;
+        }
+        h2 {
+          margin-bottom: -0.5rem;
+          font-size: 1.1rem;
+        }
+        margin: 1rem 0;
+      }
+      .footer-logo {
+        a {
+          color: $secondary;
+          text-decoration: none;
+          font-size: 1.3rem;
+          .mobile-text-inner {
+            font-weight: 600;
+          }
+        }
+      }
+      @media (min-width: $breakpoint-large) {
+        width: 50%;
+        flex-direction: row;
+        margin-top: unset;
+      }
+      @media (min-width: $breakpoint-x-large) {
+        width: 32%;
+      }
+    }
+
+    @media (min-width: $breakpoint-large) {
+      border-top: 1px solid $light-gray;
+      padding-top: 3rem;
+      margin-top: 4rem;
+      flex-wrap: nowrap;
+    }
+    @media (min-width: $breakpoint-x-large) {
+      padding-top: 7rem;
+      margin-top: 8rem;
+    }
+  }
+}

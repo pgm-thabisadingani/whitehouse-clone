@@ -1,0 +1,134 @@
+@import "../abstracts/variables";
+
+$size: 20px;
+
+.containerSearch {
+  display: none;
+  position: absolute;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: $tertiary;
+  right: 180px;
+  z-index: 100;
+  margin-top: 2rem;
+
+  button.closetn {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 8px;
+  }
+
+  .search-bar {
+    height: auto;
+    width: auto;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+
+    input {
+      height: 44px;
+      width: 44px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      font-size: 12px;
+      border: $size/10 solid transparent;
+      border-radius: 44px;
+      cursor: pointer;
+      background-color: transparent;
+      transition: all 0.5s ease-out;
+
+      color: transparent;
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:invalid {
+        box-shadow: none;
+      }
+
+      &:hover {
+        border: $size/10 solid #fff;
+        box-shadow: 0 0 $size/10 $size/10 #eee;
+      }
+
+      &:focus,
+      &:valid {
+        width: 300px;
+        border: $size/10 solid #ccc;
+        outline: none;
+        cursor: auto;
+        background-color: #fff;
+        color: #000;
+
+        &::placeholder {
+          color: #999;
+        }
+
+        + button.closetn {
+          z-index: 0;
+          right: 20px;
+          top: 12px;
+          display: inline-block;
+
+          &:after {
+            background-color: #ccc;
+          }
+        }
+      }
+    }
+  }
+
+  .search-icon {
+    display: inline-block;
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    border: $size/10 solid $secondary;
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    z-index: -1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: $size/2 + $size/4 * 1.414 + $size/10;
+      left: $size/2 + $size/4 * 1.414;
+      transform: rotate(45deg);
+      height: $size/10;
+      width: $size/2;
+      background-color: $secondary;
+      border-radius: 10px;
+    }
+  }
+
+  .search-list {
+    z-index: 200;
+    position: absolute;
+    top: 1rem;
+    right: -6rem;
+    background-color: #fff;
+    width: 15rem;
+    height: auto;
+    margin-top: 2rem;
+    overflow: hidden;
+
+    li {
+      width: 100%;
+
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 1rem;
+      }
+    }
+  }
+  @media (min-width: $breakpoint-x-large) {
+    display: block;
+  }
+}

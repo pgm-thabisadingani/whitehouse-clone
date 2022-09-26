@@ -1,0 +1,26 @@
+{
+  "name": "presidential",
+  "version": "1.0.0",
+  "description": "White house clone",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx mix watch",
+    "hot": "npx mix watch --hot",
+    "build": "npx mix --production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "thabisa dingani",
+  "license": "MIT",
+  "devDependencies": {
+    "@popperjs/core": "^2.11.2",
+    "autoprefixer": "^10.4.8",
+    "laravel-mix": "^6.0.39",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.46.0",
+    "sass-loader": "^12.4.0"
+  },
+  "dependencies": {
+    "postcss": "^8.4.16"
+  }
+}

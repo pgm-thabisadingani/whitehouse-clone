@@ -1,0 +1,36 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.content-side {
+  display: flex;
+  flex-direction: column-reverse;
+  .categories-side {
+    &_mobile {
+      width: 100%;
+      display: block !important;
+      margin-bottom: 4rem;
+      @media (min-width: $breakpoint-large) {
+        display: none !important;
+      }
+    }
+    &_desktop {
+      display: none;
+      border-left: 2px solid $light-gray;
+      padding-left: 2rem;
+      @include horizontal-list;
+      li {
+        margin-bottom: 1rem;
+        a {
+          font-size: 1.1rem !important;
+        }
+      }
+      @media (min-width: $breakpoint-large) {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  @media (min-width: $breakpoint-large) {
+    flex-direction: row;
+  }
+}

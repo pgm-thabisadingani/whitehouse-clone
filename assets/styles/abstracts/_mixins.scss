@@ -1,0 +1,203 @@
+@import "./variables";
+@mixin reset-list {
+  list-style: none;
+}
+
+@mixin horizontal-list {
+  @include reset-list;
+  li {
+    list-style: none;
+    margin: {
+      right: 1rem;
+    }
+
+    a {
+      color: $primary;
+      border-bottom: 1px solid $gray;
+      padding-bottom: 0.2rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      color: $secondary;
+      border-bottom: 1px solid $secondary;
+    }
+  }
+}
+
+@mixin border-list {
+  @include reset-list;
+  li {
+    list-style: none;
+    margin: 1.5rem 0;
+    a {
+      color: $primary;
+      border-left: 3px solid $secondary;
+      padding-left: 1rem;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      text-decoration: none;
+      font-weight: 550;
+    }
+    a:hover {
+      color: $secondary;
+    }
+  }
+}
+
+@mixin btn($primary-color, $hover-color) {
+  .btn-primary {
+    background-color: $primary-color;
+    color: $white;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    padding: 1rem;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-primary:hover {
+    background-color: $hover-color;
+  }
+}
+
+@mixin border($color, $borderRadius) {
+  border: 2px solid $color;
+  border-radius: $borderRadius;
+}
+
+@mixin Btn($bckcolor, $ftcolor) {
+  background-color: $bckcolor;
+  text-decoration: none !important;
+  font-weight: 550;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 100%;
+  color: $ftcolor;
+  display: inline-flex;
+  justify-content: center;
+  padding: 18.5px 25px;
+  text-align: center;
+  min-width: 264px;
+}
+
+@mixin transition($seconds) {
+  transition: all $seconds ease-out;
+}
+
+@mixin social($margin) {
+  margin: $margin 0;
+
+  ul {
+    display: flex;
+  }
+  ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.2rem;
+    border-radius: 50%;
+    background-color: #0a2458;
+    text-align: center;
+    a {
+      color: #fff;
+      text-transform: capitalize;
+    }
+  }
+}
+
+@mixin paddingLR {
+  padding-left: unset;
+  padding-right: unset;
+  @media (min-width: $breakpoint-large) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@mixin borderRadius {
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+@mixin postListItem($h2-size) {
+  li.post-list-item {
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 0rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    a {
+      text-decoration: none;
+      h2 {
+        text-decoration: none;
+        transition: all 0.5s ease;
+        color: $primary;
+        font-size: $h2-size;
+      }
+
+      h2:hover {
+        color: $secondary;
+        text-decoration: underline;
+        text-decoration-color: $secondary;
+        transition: all 0.5s ease;
+      }
+    }
+    .category-date {
+      display: flex;
+      align-items: center;
+      margin-top: -1rem;
+      .date-only {
+        margin-right: 1rem;
+        color: $blue;
+      }
+      ul.post-categories {
+        margin-top: unset;
+      }
+      li a {
+        text-decoration: none;
+        border: none !important;
+        color: $blue;
+      }
+    }
+  }
+}
+
+@mixin container {
+  max-width: 100%;
+  @media (min-width: $breakpoint-small) {
+    max-width: $container-width-small;
+  }
+  @media (min-width: $breakpoint-medium) {
+    max-width: $container-width-medium;
+  }
+  @media (min-width: $breakpoint-large) {
+    max-width: $container-width-large;
+  }
+  @media (min-width: $breakpoint-x-large) {
+    max-width: $container-width-x-large;
+  }
+  @media (min-width: $breakpoint-x-large) {
+    max-width: $container-width-xx-large;
+  }
+}
+
+@mixin contant {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 4rem;
+
+  @media (min-width: $breakpoint-large) {
+    max-width: calc(50% - 20px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@mixin desktop {
+}

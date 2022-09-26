@@ -1,0 +1,221 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+div {
+  ul.repeater-feature {
+    li {
+      .feature-left {
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .feature-image {
+          &_inner {
+            transform: unset;
+            img {
+              border-radius: 16px;
+              height: auto;
+              max-width: none;
+              min-height: 400px;
+              object-fit: cover;
+              width: 100%;
+              transform: unset;
+              margin-right: unset;
+
+              transform: translateY(117px);
+              pointer-events: none;
+
+              @media (min-width: $breakpoint-extra-small) {
+                min-height: 320px;
+                transform: translateY(100px);
+              }
+              @media (min-width: $breakpoint-large) {
+                min-height: 516px;
+                transform: translateY(90px);
+                max-width: 43rem;
+              }
+              @media (min-width: $breakpoint-x-large) {
+                height: 430px;
+                min-height: auto;
+                width: 510px;
+                transform: unset;
+                transform: translateX(6rem);
+              }
+
+              @media (min-width: $breakpoint-xx-large) {
+                margin-left: -3vw;
+              }
+              @media (min-width: $breakpoint-xxx-large) {
+                height: 477px;
+                width: 617px;
+                // margin-left: 10vw;
+              }
+            }
+          }
+          //   @media (min-width: $breakpoint-xx-large) {
+          //     margin-left: calc(5% - 5rem);
+          //   }
+          //   @media (min-width: $breakpoint-xxx-large) {
+          //     margin-left: calc(5% + 10rem);
+          //   }
+        }
+
+        .feature-content {
+          background-color: $tertiary;
+
+          &_text {
+            padding: 157px 34px 38px;
+            @include border-list;
+
+            div.title-back {
+              padding-bottom: 1rem;
+              border-bottom: 1px solid $light-gray;
+              margin-bottom: 1rem;
+              h1 {
+                text-align: left;
+              }
+            }
+
+            @media (min-width: $breakpoint-extra-small) {
+              min-height: 320px;
+            }
+            @media (min-width: $breakpoint-small) {
+            }
+            @media (min-width: $breakpoint-large) {
+              padding: 115px 40px 20px;
+            }
+            @media (min-width: $breakpoint-x-large) {
+              min-height: 550px;
+              padding: 63px 80px 63px 140px;
+            }
+            @media (min-width: $breakpoint-xx-large) {
+              //   padding: 63px 40px 63px 160px;
+            }
+            @media (min-width: $breakpoint-xxx-large) {
+              //   padding: 63px 29% 63px 160px;
+            }
+          }
+          @media (min-width: $breakpoint-large) {
+            margin-right: 2rem;
+            padding-right: 2rem;
+            margin-left: 3rem;
+          }
+        }
+
+        @media (min-width: $breakpoint-x-large) {
+          flex-direction: row;
+        }
+      }
+
+      .feature-right {
+        padding-top: 0rem;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .feature-image {
+          &_inner {
+            transform: unset;
+            margin-top: -6rem;
+
+            img {
+              border-radius: 16px;
+              height: auto;
+              max-width: none;
+              min-height: 400px;
+              object-fit: cover;
+              width: 100%;
+              transform: unset;
+              margin-right: unset;
+
+              transform: translateY(117px);
+              pointer-events: none;
+
+              @media (min-width: $breakpoint-extra-small) {
+                min-height: 320px;
+                transform: translateY(100px);
+              }
+              @media (min-width: $breakpoint-large) {
+                min-height: 516px;
+                transform: translateY(90px);
+                max-width: 43rem;
+              }
+              @media (min-width: $breakpoint-x-large) {
+                height: 430px;
+                min-height: auto;
+                width: 510px;
+                transform: unset;
+                transform: translateX(-6rem);
+              }
+
+              @media (min-width: $breakpoint-xx-large) {
+                margin-right: -3vw;
+              }
+              @media (min-width: $breakpoint-xxx-large) {
+                height: 477px;
+                width: 617px;
+                // margin-right: 10vw;
+              }
+            }
+            @media (min-width: $breakpoint-large) {
+              margin-top: unset;
+            }
+            @media (min-width: $breakpoint-x-large) {
+              margin-top: unset;
+            }
+          }
+        }
+        .feature-content {
+          background-color: $tertiary;
+          width: 100%;
+
+          &_text {
+            padding: 157px 34px 38px;
+            @include border-list;
+            div.title-back {
+              padding-bottom: 1rem;
+              border-bottom: 1px solid $light-gray;
+              margin-bottom: 1rem;
+              h1 {
+                text-align: left;
+              }
+            }
+
+            @media (min-width: $breakpoint-extra-small) {
+              min-height: 320px;
+            }
+            @media (min-width: $breakpoint-small) {
+            }
+            @media (min-width: $breakpoint-large) {
+              padding: 115px 40px 20px;
+            }
+            @media (min-width: $breakpoint-x-large) {
+              min-height: 550px;
+              padding: 63px 140px 63px 80px;
+            }
+            @media (min-width: $breakpoint-xx-large) {
+              //   padding: 63px 160px 63px 40px;
+            }
+            @media (min-width: $breakpoint-xxx-large) {
+              //   padding: 63px 160px 63px 29%;
+            }
+          }
+          @media (min-width: $breakpoint-large) {
+            margin-left: 2rem;
+            padding-left: 2rem;
+            margin-right: 3rem;
+          }
+        }
+        @media (min-width: $breakpoint-x-large) {
+          flex-direction: row-reverse;
+        }
+        @media (min-width: $breakpoint-x-large) {
+          padding-top: 2rem;
+        }
+      }
+    }
+  }
+}

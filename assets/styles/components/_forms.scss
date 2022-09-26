@@ -1,0 +1,107 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.newsletter-wrapper {
+  @include border($color: $primary, $borderRadius: 2rem);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 200;
+    color: $primary;
+    margin-bottom: 1rem;
+    @media (min-width: $breakpoint-large) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &-logo {
+    display: none;
+    width: 40%;
+    overflow: hidden;
+    @include transition($seconds: 0.5s);
+  }
+
+  &-form {
+    width: 100%;
+    .form {
+      div.mc4wp-form-fields {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-items: flex-end;
+
+        .newsletter-email {
+          width: 100%;
+          padding-bottom: 1rem;
+          @media (min-width: $breakpoint-x-large) {
+            width: 60%;
+            padding-bottom: unset;
+          }
+        }
+        .newsletter-zip {
+          width: 100%;
+          @media (min-width: $breakpoint-x-large) {
+            width: 20%;
+            margin: 0 1rem;
+          }
+        }
+
+        @include btn($primary-color: $primary, $hover-color: $secondary);
+        .btn-primary {
+          width: 100%;
+          margin-top: 1rem;
+
+          @media (min-width: $breakpoint-x-large) {
+            width: 30%;
+            margin-top: unset;
+          }
+        }
+
+        .newsletter-label {
+          padding-bottom: 0.3rem;
+          label {
+            color: $primary;
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            font-weight: 500;
+          }
+        }
+
+        input:not(.btn-primary) {
+          background-color: $light-blue;
+          color: $primary;
+          border: none;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          outline: none;
+          width: 100%;
+        }
+        @media (min-width: $breakpoint-large) {
+          padding-right: unset;
+        }
+        @media (min-width: $breakpoint-x-large) {
+          flex-wrap: nowrap;
+          padding-right: 2.5rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-large) {
+    &-logo {
+      display: block;
+    }
+    &-form {
+      width: 60%;
+    }
+  }
+
+  @media (min-width: $breakpoint-x-large) {
+  }
+}

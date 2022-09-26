@@ -1,0 +1,57 @@
+$primary: #0a2458;
+$secondary: #876450;
+$tertiary: #fffbec;
+$peach: #edbe87;
+$white: #fff;
+$gray: #b9b9b9;
+$light-gray: #edebeb;
+$brown: #9c1919;
+$light-blue: #e0e5ef;
+$blue: #2f90eb;
+$dark-blue: #0064bc;
+$bckg-black: #00030d9b;
+
+$enable-negative-margins: true;
+
+$font-family-base: "DM Sans", "sans-serif";
+$headings-font-family: "Spartan", "sans-serif";
+$headings-font-weight: 700;
+$headings-line-height: 3.75rem;
+
+$headings-font-size: 1.2rem;
+$navigations-font-size: 0.8rem;
+
+$navbar-padding-y: 1rem;
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: $primary;
+$navbar-dark-disabled-color: rgba($white, 0.25);
+
+$btn-border-radius: 2rem;
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 1.5rem;
+$btn-font-weight: 400;
+
+$card-border-width: 0;
+$card-border-radius: 1.25rem;
+
+$box-shadow-lg: 0px 0px 1.875rem rgb($primary, 0.15);
+
+$breadcrumb-divider: quote(">");
+
+//max width
+$container-width-small: 33.75rem;
+$container-width-medium: 45rem;
+$container-width-large: 60rem;
+$container-width-x-large: 71.25rem;
+$container-width-xx-large: 82.5rem;
+
+//breack-point
+$breakpoint-extra-small: 100%;
+$breakpoint-small: 36rem;
+$breakpoint-medium: 36rem;
+$breakpoint-large: 48rem;
+$breakpoint-x-large: 62rem;
+
+$breakpoint-xx-large: 75rem;
+$breakpoint-xxx-large: 85rem;
+$breakpoint-xxxx-large: 90rem;

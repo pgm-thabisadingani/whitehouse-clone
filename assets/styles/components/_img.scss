@@ -1,0 +1,11 @@
+img:not(.footer-img, .custom-logo) {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

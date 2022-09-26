@@ -1,0 +1,13 @@
+.custom-logo {
+  width: 4rem;
+  height: 3rem;
+
+  transition: all 0.3s ease-in-out;
+  @media (min-width: $breakpoint-medium) {
+    width: 6rem;
+    height: 4.5rem;
+  }
+}
+.custom-logo:hover {
+  transform: scale(1.1);
+}

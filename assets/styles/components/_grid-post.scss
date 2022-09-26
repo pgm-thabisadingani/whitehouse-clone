@@ -1,0 +1,53 @@
+.container-posts-front {
+  padding: 0 0;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-items: stretch;
+  .feature-posts,
+  .middle-posts {
+    margin-right: 2rem;
+  }
+  .feature-posts {
+    @include postListItem($h2-size: 37px);
+    li.post-list-item {
+      border-bottom: none;
+      padding-bottom: 0rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      a {
+        text-align: center;
+        h2 {
+          margin-top: 2rem;
+        }
+      }
+      .category-date {
+        justify-content: center;
+        p.date-only {
+          line-height: unset;
+          margin-bottom: unset;
+        }
+      }
+    }
+  }
+  .middle-posts,
+  .end-posts {
+    border-left: 1px solid #ccc;
+    padding-left: 2rem;
+    @include postListItem($h2-size: 20px);
+  }
+  @media (min-width: $breakpoint-small) {
+  }
+
+  @media (min-width: $breakpoint-x-large) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 4rem 0;
+  }
+}
+
+.content-side {
+  .content {
+    @include postListItem($h2-size: 32px);
+  }
+}
